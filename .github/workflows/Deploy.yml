@@ -26,5 +26,5 @@ jobs:
 
       - name: Deploy Images.html to EC2 nginx root
         run: |
-          scp -i ~/.ssh/ec2_key.pem Images.html ubuntu@${{ secrets.EC2_HOST }}:/tmp/Images.html
-          ssh -i ~/.ssh/ec2_key.pem ubuntu@${{ secrets.EC2_HOST }} "sudo mv /tmp/Images.html /var/www/html/Images.html && sudo systemctl restart nginx"
+          scp -i ~/.ssh/ec2_key.pem Images.html ubuntu@${{ secrets.EC2_HOST }}:/tmp/Image.html
+          ssh -i ~/.ssh/ec2_key.pem ubuntu@${{ secrets.EC2_HOST }} "sudo mv /tmp/Image.html /var/www/html/Images.html && sudo systemctl restart nginx"
